@@ -4,8 +4,8 @@ import Image from '../segun.jfif'
 function Profile() {
   return (
     <div className="profile">
-      <img src={Image} alt="" id="profile__img" />
-      <h3 id="twitter">segun0x</h3>
+      <img src={Image} alt="profile img" id="profile__img"/>
+      <p id="twitter" style={{fontWeight: 700,fontSize: '20px',lineHeeight: '30px'}}>segun0x</p>
       <p id="slack">segunn</p>
     </div>
   )

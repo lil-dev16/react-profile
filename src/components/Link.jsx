@@ -1,8 +1,9 @@
 
-function Link() {
+function Link(props) {
   return (
     <div className="link">
-        <p></p>
+        <button id={props.nam}><a href={props.url}>{props.title}</a></button>
+        
     </div>
   )
 }
