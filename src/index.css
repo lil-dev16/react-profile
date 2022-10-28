@@ -24,7 +24,7 @@ code {
   height: 88px;
 }
 
-.link button{
+.link div{
   padding: 24px 0;
   width: 100%;
   border: none;
@@ -32,8 +32,16 @@ code {
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
+  background-color: #EAECF0;
 }
-.link button a{
+.link div:focus{
+  border: 1px solid #98A2B3;
+}
+.link div:hover{
+  background-color: #D0D5DD;
+  cursor: pointer;
+}
+.link div a{
   text-decoration: none;
   color: black;
 }
@@ -52,9 +60,61 @@ code {
 #slack{
   display: none;
 }
-
-@media screen and (max-width: 760px) {
-  .social-icons{
+.foot{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.cam{
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(128, 128, 128, 0.653);
+  top: 0;
+  width: 88px;
+  border-radius: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  /* left: 0; */
+  /* right: 0; */
+}
+.cam img{
+  bottom: 0;
+  cursor: pointer;
+}
+.cam img:hover{
+  cursor: pointer;
+}
+.hng{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.profile{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.gf{
+  margin-left: auto;
+}
+.share{
+  margin-left: auto;
+}
+.mobile{
+ display: none;
+}
+@media screen and (max-width: 740px){
+  .foot{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mobile{
+    display: block;
+  }
+  .web{
     display: none;
   }
 }

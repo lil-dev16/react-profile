@@ -2,6 +2,7 @@ import React from 'react'
 import Profile from '../components/Profile';
 import Link from '../components/Link';
 import { Socials } from '../components/Socials';
+import { Footer } from '../components/Footer';
 
 export const Home = () => {
   return (
@@ -15,6 +16,7 @@ export const Home = () => {
         <Link nam="book__design" title="Design Books" url="https://books.zuri.team/design-rules"/>
         </div>
         <Socials />
+        <Footer />
     </div>
   )
 }
