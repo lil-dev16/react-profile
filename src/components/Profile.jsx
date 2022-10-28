@@ -16,7 +16,7 @@ function Profile() {
         
         </div>
         <p id="twitter" style={{fontWeight: 700,fontSize: '20px',lineHeeight: '30px'}}>segun0x</p>
-        <p id="slack">olusegunkd2017</p>
+        <p id="slack">segun0x</p>
       </div>
       <img src="share.png" alt="" className='share web'/>
       <img src="dots.png" alt="" className='share mobile'/>
