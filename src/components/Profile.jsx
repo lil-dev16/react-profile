@@ -11,7 +11,7 @@ function Profile() {
         onMouseLeave={()=>setHover(false)}
         />
         {hover && <div className='cam'>
-        <img src='camera-01.png' alt="" />
+        <img src='camera-01.png' alt="cam" />
         </div>}
         
         </div>
