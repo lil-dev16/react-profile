@@ -54,7 +54,7 @@ export const Contact = () => {
               placeholder='Enter your first name'
               onChange={handleChange}
               />
-              <h1>{errorVal.firstname}</h1>
+              <p>{errorVal.firstname}</p>
             </div>
             <div className="lastn">
               <label htmlFor="">Last name</label>
@@ -66,6 +66,7 @@ export const Contact = () => {
             placeholder='Enter your last name'
             onChange={handleChange}
             />
+             <p>{errorVal.lastname}</p>
             </div>
           </div>
           <div className="emai">
@@ -79,6 +80,7 @@ export const Contact = () => {
             required
             onChange={handleChange}
             />
+             <p>{errorVal.email}</p>
           </div>
           <label htmlFor="">Message</label>
             <textarea 
