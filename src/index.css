@@ -106,6 +106,46 @@ code {
 .mobile{
  display: none;
 }
+
+/*==CONTACT PAGE===*/
+.form{
+  display: grid;
+  grid-gap: 1rem;
+}
+.form div{
+  display: grid;
+}
+.first_form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 19px;
+}
+.forrm{
+  padding: 12px;
+  font-size: 15px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+#btn__submit{
+  padding: 1rem;
+  background-color: #1570EF;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+}
+.contact_container{
+  width: 85%;
+  margin: auto;
+}
+label{
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+/*END CONTACT*/
 @media screen and (max-width: 740px){
   .foot{
     flex-direction: column;
@@ -116,5 +156,9 @@ code {
   }
   .web{
     display: none;
+  }
+  .first_form{
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr;
   }
 }
