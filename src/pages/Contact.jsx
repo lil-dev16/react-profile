@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Footer } from '../components/Footer';
 
 export const Contact = () => {
@@ -16,12 +16,12 @@ export const Contact = () => {
     const {name, value} = e.target;
     setFormValues({...formValues, [name]: value });
   }
-  useEffect(() => {
-    console.log(errorVal);
-    if (Object.keys(errorVal).length === 0) {
-      console.log(formValues);
-    }
-  }, [errorVal]);
+  // useEffect(() => {
+  //   console.log(errorVal);
+  //   if (Object.keys(errorVal).length === 0) {
+  //     console.log(formValues);
+  //   }
+  // }, [errorVal]);
   const validate = (val) => {
     const error = {};
     if(!val.firstname) {
