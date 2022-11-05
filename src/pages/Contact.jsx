@@ -1,17 +1,39 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Footer } from '../components/Footer';
 
 export const Contact = () => {
   const [formValues, setFormValues] = useState({firstname: "", lastname: "", email:""});
+  const [errorVal, setErrorVal] = useState({});
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setErrorVal(validate(formValues)) ;
+    console.log(formValues);
   }
+
   const handleChange = (e) => {
     const {name, value} = e.target;
     setFormValues({...formValues, [name]: value });
-    console.log(formValues);
+  }
+  useEffect(() => {
+    console.log(errorVal);
+    if (Object.keys(errorVal).length === 0) {
+      console.log(formValues);
+    }
+  }, [errorVal]);
+  const validate = (val) => {
+    const error = {};
+    if(!val.firstname) {
+      error.firstname = "Please input your first name"
+    }
+    if(!val.lastname) {
+      error.lastname = "Please input your last name"
+    }
+    if(!val.email) {
+      error.email = "Please input your email address"
+    }
+    return error
   }
   return (
     <div className='contact_container'>
@@ -32,6 +54,7 @@ export const Contact = () => {
               placeholder='Enter your first name'
               onChange={handleChange}
               />
+              <h1>{errorVal.firstname}</h1>
             </div>
             <div className="lastn">
               <label htmlFor="">Last name</label>
@@ -66,6 +89,8 @@ export const Contact = () => {
             rows="10" 
             className='forrm'
              ></textarea>
+             <input type="checkbox" name="" id="" />
+             <p>Default You agree to providing your data to  who may contact you.</p>
             <button 
             type="submit"
             id="btn__submit"
