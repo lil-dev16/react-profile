@@ -17,6 +17,7 @@ code {
   margin: auto;
   display: grid;
   grid-gap: 1rem;
+  text-align: center;
 }
 
 #profile__img{

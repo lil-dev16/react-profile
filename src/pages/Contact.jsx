@@ -25,14 +25,18 @@ export const Contact = () => {
   // }, [errorVal]);
   const validate = (val) => {
     const error = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     if(!val.firstname) {
       error.firstname = "Please input your first name"
+
     }
     if(!val.lastname) {
       error.lastname = "Please input your last name"
     }
     if(!val.email) {
       error.email = "Please input your email address"
+    }else if (!regex.test(val.email)) {
+      error.email = "This is not a valid email format!";
     }
     return error
   }
@@ -96,8 +100,8 @@ export const Contact = () => {
             placeholder='Send me a message and Ill reply you as soon as possible...'
             name="" 
             id="message"
-            cols="30" 
-            rows="10" 
+            cols="25" 
+            rows="7" 
             className='forrm'
              ></textarea>
              <section className="checksec">
