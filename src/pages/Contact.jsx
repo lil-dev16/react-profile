@@ -111,7 +111,7 @@ export const Contact = () => {
             <button 
             type="submit"
             id="btn__submit"
-            >Submit</button>
+            >Send Message</button>
         </form>
         <Footer />
     </div>
