@@ -59,7 +59,7 @@ export const Contact = () => {
         <form className="form" onSubmit={handleSubmit}>
           <div className="first_form">
             <div className="firstn">
-            <label htmlFor="First name">First name</label>
+            <label htmlFor="first_name">First name</label>
             <input 
               name='firstname'
               type="text" 
@@ -71,7 +71,7 @@ export const Contact = () => {
               <p className='err'>{errorVal.firstname}</p>
             </div>
             <div className="lastn">
-              <label htmlFor="">Last name</label>
+              <label htmlFor="last_name">Last name</label>
             <input 
             name='lastname'
             type="text" 
@@ -84,7 +84,7 @@ export const Contact = () => {
             </div>
           </div>
           <div className="emai">
-            <label htmlFor="">Email</label>
+            <label htmlFor="email">Email</label>
             <input 
             name='email'
             type="text" 
@@ -98,7 +98,7 @@ export const Contact = () => {
           <label htmlFor="">Message</label>
             <textarea 
             placeholder='Send me a message and Ill reply you as soon as possible...'
-            name="" 
+            name="message" 
             id="message"
             cols="25" 
             rows="7" 
