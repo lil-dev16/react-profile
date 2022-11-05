@@ -126,7 +126,7 @@ code {
   padding: 12px;
   font-size: 15px;
   outline: none;
-  border: 1px solid black;
+  border: 1px solid rgb(143, 139, 139);
   border-radius: 5px;
   font-weight: 600;
 }
@@ -147,6 +147,21 @@ label{
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 10px;
+}
+.err{
+  color: red;
+}
+.checksec{
+  display: flex;
+}
+.display_success{
+  padding: 1px;
+  background-color: rgb(142, 199, 113);
+  border-radius: 5px;
+  width: 135px;
+  margin: auto;
+  color: white;
+  text-align: center;
 }
 /*END CONTACT*/
 @media screen and (max-width: 740px){

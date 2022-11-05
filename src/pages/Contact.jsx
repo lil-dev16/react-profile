@@ -5,11 +5,12 @@ import { Footer } from '../components/Footer';
 export const Contact = () => {
   const [formValues, setFormValues] = useState({firstname: "", lastname: "", email:""});
   const [errorVal, setErrorVal] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setErrorVal(validate(formValues)) ;
-    console.log(formValues);
+    setIsSubmit(true);
   }
 
   const handleChange = (e) => {
@@ -35,13 +36,22 @@ export const Contact = () => {
     }
     return error
   }
+
+  const name = "segun0x";
   return (
     <div className='contact_container'>
       <div className="info">
-        <pre>{JSON.stringify(formValues,undefined, 2)}</pre>
         <h1>Contact Me</h1>
         <p>Hi there, contact me about anything you have in mind</p>
       </div>
+      {Object.keys(errorVal).length === 0 && isSubmit ? (
+        <div className="display_success" style={{}}>
+        <p>Form Submitted</p>
+      </div>
+      ) : (
+        <div>
+      </div>
+      )}
         <form className="form" onSubmit={handleSubmit}>
           <div className="first_form">
             <div className="firstn">
@@ -54,7 +64,7 @@ export const Contact = () => {
               placeholder='Enter your first name'
               onChange={handleChange}
               />
-              <p>{errorVal.firstname}</p>
+              <p className='err'>{errorVal.firstname}</p>
             </div>
             <div className="lastn">
               <label htmlFor="">Last name</label>
@@ -66,7 +76,7 @@ export const Contact = () => {
             placeholder='Enter your last name'
             onChange={handleChange}
             />
-             <p>{errorVal.lastname}</p>
+             <p className='err'>{errorVal.lastname}</p>
             </div>
           </div>
           <div className="emai">
@@ -77,10 +87,9 @@ export const Contact = () => {
             id='email' 
             className='forrm form3' 
             placeholder='yourname@gmail.com'
-            required
             onChange={handleChange}
             />
-             <p>{errorVal.email}</p>
+             <p className='err'>{errorVal.email}</p>
           </div>
           <label htmlFor="">Message</label>
             <textarea 
@@ -91,8 +100,10 @@ export const Contact = () => {
             rows="10" 
             className='forrm'
              ></textarea>
-             <input type="checkbox" name="" id="" />
-             <p>Default You agree to providing your data to  who may contact you.</p>
+             <section className="checksec">
+              <input type="checkbox" name="" id="" />
+              <p>Default You agree to providing your data to {name} who may contact you.</p>
+             </section>
             <button 
             type="submit"
             id="btn__submit"
